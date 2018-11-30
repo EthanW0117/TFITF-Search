@@ -1,7 +1,6 @@
 package index;
 
 import java.util.ArrayList;
-
 import io.DocSource;
 import score.TermScoringFun;
 import tokenizer.Tokenizer;

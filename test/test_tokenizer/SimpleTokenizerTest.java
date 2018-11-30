@@ -20,9 +20,16 @@ public class SimpleTokenizerTest {
 		assertEquals("Failed simple token", "product", tokens.get(2));
 	}
 
-	@Test
-	public void failAlways() {
-		//Thread.sleep(3000);
-		fail("This always fails");
-	}
+//	@Test
+//	public void myNewTest() {
+//		//create all objects to be used for this test
+//		// run the code you want to test. try to test a variety of different cases
+//		// if you can, generate random input
+//		assertEquals("Whoknows","Hello","hello");
+//	}
+//	@Test
+//	public void failAlways() {
+//		//Thread.sleep(3000);
+//		fail("This always fails");
+//	}
 }

@@ -2,6 +2,7 @@ package test;
 
 import java.util.ArrayList;
 
+
 import index.DocScore;
 import index.Index;
 import tokenizer.SimpleTokenizer;
@@ -29,9 +30,9 @@ public class TestSearch {
 		System.out.println("\nTokenize results: " + tok.tokenize("SoftBank is buying a chunk of Uber and it's state-of-the-art Taxi-hailing system for $10 billion"));
 		
 		// Build a simple search index with the basic classes given
-		TestIndex(new soln.index.InvertedIndex(new io.StaticDocSource(), 
-				  							   new tokenizer.SimpleTokenizer(), 
-				  							   new score.TFScoringFun()));
+//		TestIndex(new soln.index.InvertedIndex(new io.StaticDocSource(), 
+//				  							   new tokenizer.SimpleTokenizer(), 
+//				  							   new score.TFScoringFun()));
 		
 		// TODO: Here is the solution implementation of all classes -- you will need to unzip the files
 		//       provided on Blackboard and provide the correct path as the argument to FileDocSource.
@@ -43,9 +44,10 @@ public class TestSearch {
 		//       (Do not rename classes... modulo the issue that you might store your files in a different
 		//        directory which can change, the following code should otherwise work when uncommented once
 		//        your project is complete.)
-//		TestIndex(new index.InvertedIndex(new io.FileDocSource("../Part1"), 
-//				                          new tokenizer.IndexingTokenizer(), 
-//										  new score.TFIDFScoringFun()));
+		TestIndex(new index.InvertedIndex(new io.FileDocSource("files/Part1/awards_1994"), 
+                  new tokenizer.IndexingTokenizer(), 
+				  new score.TFIDFScoringFun()));
+		
 	}
 
 	public static void TestIndex(Index s) {
@@ -63,7 +65,7 @@ public class TestSearch {
 		DoSearch(s, "Bitcoin");
 		DoSearch(s, "billion");
 		DoSearch(s, "computer equipment");
-		//DoSearch(s, "at to of by");
+//		DoSearch(s, "at to of by");
 		ms_end = System.currentTimeMillis();
 		System.out.println("\n>> Completed searches in " + (ms_end - ms_start) + " ms.");
 		System.out.flush(); // If doing a lot of printing, flush the buffer so we don't wait for output

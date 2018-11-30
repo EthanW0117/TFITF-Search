@@ -3,7 +3,7 @@ package score;
 import index.Index;
 
 public class TFScoringFun implements TermScoringFun {
-
+	
 	@Override
 	public void init(Index s) {
 		// Do nothing here for TF... no need to compute IDF so no need to keep track of the Index.
